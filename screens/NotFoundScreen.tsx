@@ -17,7 +17,7 @@ export default function NotFoundScreen({ navigation }: RootStackScreenProps<'Not
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#30475E',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,

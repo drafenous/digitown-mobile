@@ -16,6 +16,7 @@ export default function TabTwoScreen() {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: '#30475E',
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',

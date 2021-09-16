@@ -17,6 +17,7 @@ export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   Modal: undefined;
   NotFound: undefined;
+  Login: NavigatorScreenParams<SessionScreenParamList> | undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
@@ -28,6 +29,11 @@ export type RootTabParamList = {
   TabOne: undefined;
   TabTwo: undefined;
 };
+
+export type SessionScreenParamList = {
+  Login: undefined;
+  Register: undefined;
+}
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
   BottomTabScreenProps<RootTabParamList, Screen>,

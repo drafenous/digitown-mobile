@@ -8,12 +8,12 @@ import { Text, View } from './Themed';
 
 export default function EditScreenInfo({ path }: { path: string }) {
   return (
-    <View>
+    <View style={styles.container}>
       <View style={styles.getStartedContainer}>
         <Text
           style={styles.getStartedText}
           lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
+          darkColor="#30475E">
           Open up the code for this screen:
         </Text>
 
@@ -50,7 +50,11 @@ function handleHelpPress() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#30475E',
+  },
   getStartedContainer: {
+    backgroundColor: '#30475E',
     alignItems: 'center',
     marginHorizontal: 50,
   },
@@ -58,6 +62,7 @@ const styles = StyleSheet.create({
     marginVertical: 7,
   },
   codeHighlightContainer: {
+    backgroundColor: '#30475E',
     borderRadius: 3,
     paddingHorizontal: 4,
   },
@@ -72,6 +77,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   helpLink: {
+    backgroundColor: '#30475E',
     paddingVertical: 15,
   },
   helpLinkText: {
