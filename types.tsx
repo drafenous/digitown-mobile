@@ -17,7 +17,8 @@ export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   Modal: undefined;
   NotFound: undefined;
-  Login: NavigatorScreenParams<RootTabParamList> | undefined;
+  Login: undefined;
+  Register: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
@@ -26,13 +27,28 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> = Nati
 >;
 
 export type RootTabParamList = {
-  Login: undefined;
-  Register: undefined;
   Home: undefined;
   TabTwo: undefined;
+  Login: undefined;
+  Register: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
   BottomTabScreenProps<RootTabParamList, Screen>,
   NativeStackScreenProps<RootStackParamList>
 >;
+
+export interface ScheduleModel {
+  scheduleId?: number;
+  companyName: string;
+  datetime: string;
+  userId: number;
+}
+
+export interface ScheduleListComponentProps {
+  listSchedules?: ScheduleModel[]
+}
+
+export interface SchedulerComponentProps {
+  refreshData: () => void;
+}

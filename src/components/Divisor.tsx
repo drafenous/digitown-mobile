@@ -10,8 +10,7 @@ const Wrapper = styled.View`
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 13px;
-    margin-bottom: 13px;
+    margin: 13px;
 `;
 
 const Bar = styled.View`
